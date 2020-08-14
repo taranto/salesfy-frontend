@@ -1,0 +1,71 @@
+.modal {
+    min-width: 70%;
+    max-width: 70%;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+
+    .body {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        border-bottom: 1px solid $gray-color;
+
+        h5 {
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 90%;
+        }
+
+        img {
+            padding-right: 10px;
+        }
+
+        .close-button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+    }
+
+    .footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: 35px;
+        border-top: 1px solid $gray-color;
+        
+        .success-button {
+            float: right;
+            margin-bottom: 10px;
+        }
+    }
+
+    &.confirm {
+        min-width: 320px;
+        max-width:320px; 
+
+        .body {
+            h6 {
+                margin: 20px;
+            }
+        }
+    }
+}
+
+.filter {
+    .modal {
+        .body {
+            overflow-y: visible;
+        }
+    }
+}

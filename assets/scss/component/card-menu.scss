@@ -1,0 +1,76 @@
+.card-menu {
+    z-index: 9999999; 
+
+    > button {
+        padding: 4px;
+    }
+    
+    .popper {
+        right: 10px;
+        bottom: 35px;
+        top: inherit !important;
+        left: inherit !important;
+        transform: none !important;     
+    }
+
+    .popper, .paper {
+        background-color: transparent;   
+    }
+
+    .paper {
+        position: relative;
+        box-shadow: none;
+
+        li {
+            background: rgba(0,0,0,.7);
+            border-radius: 3px;
+            clear: both;
+            color: #e6e6e6;
+            display: block;
+            float: right;
+            margin: 0 0 2px 8px;
+            padding: 4px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-right: 12px;
+            font-size: 12px;
+            height: 20px;
+            min-height: 20px;
+            text-decoration: none;
+            transition: -webkit-transform 85ms ease-in;
+            transition: transform 85ms ease-in;
+            transition: transform 85ms ease-in,-webkit-transform 85ms ease-in;
+            display: flex;
+
+            svg {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+
+            &:hover {
+                background: rgba(0,0,0,.8);
+            }
+        }
+    }
+}
+
+.confirm-delete {
+    margin-left: 0px !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 9999;
+
+    svg {
+        color: white;
+    }
+}

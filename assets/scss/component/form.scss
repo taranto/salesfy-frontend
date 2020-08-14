@@ -1,0 +1,240 @@
+.editable-field {
+	padding-left: 10px;
+	overflow: visible !important;
+	position: relative !important;
+
+   .title {
+       display: flex;
+       align-items: center;
+       color: $gray-inverse-color;
+
+       i {
+        color: $description-text-color;
+        margin-right: 10px;
+       }
+
+       img {
+           width: 25px;
+           height: 25px;
+           margin-right: 10px;
+       }
+
+       h3 {
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        min-height: 18px;
+        min-width: 40px;
+       }
+
+       button {
+           color: $description-text-color;
+           border-color: $description-text-color;
+           height: 20px;
+           line-height: 13px;
+           text-transform: capitalize;
+           margin-left: 10px;
+       }
+   }
+
+   .error {
+        color: $danger-color;
+        margin-left: 10px;
+        font-size: 12px;
+        float: right;
+    }
+
+   .editable {
+       position: relative;
+
+       p {
+           display: flex;
+           width: 100%;
+
+           > a, > span, > div {
+               width: 100%;
+           }
+       }
+
+       .submit-input {
+           position: absolute;
+           top: 0px;
+           right: 10px;
+           background-color: transparent !important;
+           z-index: 999999999;
+       }
+       
+       .fake-field {
+            background-color: rgba(9,45,66,.08);
+            color: $description-text-color;
+            border-radius: 3px;
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid transparent;
+            letter-spacing: normal;
+            display: flex;
+            flex-wrap: wrap;
+			word-break: break-word;
+
+            &.fake-text-area {
+                min-height: 108px;
+				max-height: 108px;
+				overflow-y: auto;
+            }
+
+            &.fake-text-field {
+                display: flex;
+                min-height: 32px;
+				max-height: 32px;
+				overflow-y: auto;
+                width: calc(100% - 24px);
+            }
+            &.channel-list {
+                min-height: 60px;
+            }
+
+            &.error-field {
+                border: 1px solid $danger-color;
+            }
+
+            &.fake-combo-field {
+                display: flex;
+				min-height: 32px;
+            }
+       }
+
+       .combo-field--is-disabled {
+           .combo-field__control {
+                border: 1px solid transparent !important;
+                background-color: rgba(9, 45, 66, 0.08) !important;
+           }
+       }
+       
+       .field, .combo-field input {
+            border-radius: 3px;
+            width: 100%;
+            color: $description-text-color;
+            overflow: hidden;
+            overflow-wrap: break-word;
+            resize: none;
+            background: #fff;
+            box-shadow: none;
+            border: 1px solid rgba(9,45,66,.13);
+            padding: 8px 12px;
+            font-size: 14px;
+            letter-spacing: normal;
+            outline: none !important;
+            height: 32px; 
+            font-family: 'Open Sans', sans-serif;
+
+            &::placeholder {
+                font-size: 14px;
+            }
+
+            &.field-description {       
+                min-height: 108px;
+            } 
+
+            &:before, &:after {
+                border-bottom: 0px solid transparent !important;
+            }
+       }       
+
+       input, textarea, .combo-field > div > div > div {
+           font-size: 14px;
+           letter-spacing: normal;
+       }
+
+       .combo-field {
+            // z-index: 999999;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            overflow: visible;
+           > div:first-of-type {
+                > div {
+                   padding: 2px 10px;
+                }
+                min-height: 48px;
+                box-shadow: none;
+                border: 1px solid rgba(9,45,66,.13);
+           }
+
+           .combo-field__menu-list {
+               max-height: 140px;
+           }
+
+
+       }
+
+       .chip, .combo-field__multi-value {
+            background-color: #e6e6e6;
+            border-radius: 2px;
+            margin-right: 9px;
+            min-width: 0;
+            box-sizing: border-box;
+            height: 28px;
+            color: $description-text-color;            
+       }
+
+       .combo-field__multi-value {
+            top: -1px;
+           .combo-field__multi-value__label {
+                color: $description-text-color;
+                font-size: 0.8125rem;
+                line-height: 25px;
+           }
+       }   
+   }
+}
+
+.form {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 30px;
+}
+
+.view-buttons {
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-button {
+    align-self: center;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-color: $primary-color !important;
+    height: 40px;
+}
+
+.submit-text {
+    color: $primary-color !important;
+}
+
+.submit-error-message {
+    color: $danger-color;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-self: 'center';
+    font-size: 14px;
+}
+
+.container-checkbox {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-custom-input-render {
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px;
+    width: calc(100% - 24px);
+}

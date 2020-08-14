@@ -1,0 +1,59 @@
+@import 'theme/vars';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+
+body {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+
+  p:focus, div:focus, input:focus {
+    outline: none !important;
+  }
+}
+
+// Component.
+
+  @import "component/user";
+  @import "component/group";
+  @import "component/combo";
+  @import "component/content-list";
+  @import "component/channel-list";
+  @import "component/stories-list";
+  @import "component/header";
+  @import "component/button";
+  @import "component/screen";
+  @import "component/picture-upload";
+  @import "component/form";
+  @import "component/channel-details";
+  @import "component/card-menu";
+  @import "component/slider-carousel";
+  @import "component/list";
+  @import "component/login";
+  @import "component/filter-container";
+  @import "component/app-container";
+  @import "component/modal";
+  @import "component/drive";
+  @import "component/menu";
+  @import "component/card-state";
+  @import "component/gallery";
+  @import "component/content-details";
+  @import "component/fast-link";
+  @import "component/horizontal-list";
+  
+  // Screens
+  @import "screens/group-screen";
+  @import "screens/home-dashboard-screen";
+
+  .dashboard {
+    padding: 20px;
+    > div {
+      padding: 20px !important;
+      > div {
+        padding: 20px;
+        border: 1px solid #ebebeb;
+      }
+    }
+  }
+
+  .col-relative {
+    position: relative;
+  }

@@ -1,0 +1,270 @@
+$card-width-image: 110;
+$card-width: $card-width-image*3;
+$full-height: $card-width-image*1.45;
+
+$card-width-mobile-image: 110;
+$card-mobile-width: $card-width-mobile-image*3;
+$full-mobile-height: $card-width-mobile-image*1.45;
+
+
+$card-width-image-small: 25;
+$card-width-small: $card-width-image-small*3;
+$full-height-small: $card-width-image-small*1.45;
+
+$lines : round(($full-height - 140)/12);
+$lines-small : round(($full-height-small - 160)/12);
+$lines-mobile : round(($full-mobile-height - 120)/12);
+
+$card-width-image-px: #{$card-width-image}px;
+$card-width-px: #{$card-width}px;
+$full-height-px: #{$full-height}px;
+
+$card-width-image-small-px: #{$card-width-image-small}px;
+$card-width-small-px: #{$card-width-small}px;
+$full-height-small-px: #{$full-height-small}px;
+
+$card-width-mobile-image-px: #{$card-width-mobile-image}px;
+$card-mobile-width-px: #{$card-mobile-width}px;
+$full-height-mobile-px: #{$full-mobile-height}px;
+
+$card-content-height: 95px;
+$card-content-height-small: 105px;
+
+.channel-list {
+	&:not(.horizontal) {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		justify-content: center;
+	}
+
+    > div > div > div[role='grid'] {
+		height: calc(100vh - 52px) !important;
+    }
+    
+    .row-grid-list {
+        display: flex;
+        align-items: center;
+		justify-content: center;
+		
+		overflow-y: hidden;
+    }
+
+	.content-list-header {
+		width: 100% !important;
+		height: 250px !important;
+
+		ul {
+			justify-content: center;
+		}
+	}
+
+	.loader {
+		height: auto !important;
+		padding: 0px !important;
+		margin: 0px !important;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+    .card {
+        position: relative;
+        width: $card-width-px;
+		height: $full-height-px;
+		padding: 0;
+		margin:20px;
+		border-radius: 5px;
+		overflow: hidden;
+		height: $full-height-px;
+		border: 1px solid #ebebeb;
+		box-shadow: none;
+
+		.card-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			min-width: $card-width-image-px;
+			width: $card-width-image-px;
+			height: $full-height-px;
+			// border-right: 1px solid #ebebeb;
+
+			&.widescreen {
+				right: 0;
+				min-width: 100%;
+				width: 100%;
+			}
+		}
+
+		&:hover{
+			border: 1px solid #ddd;
+			cursor: pointer;
+		}
+
+		.card-content {
+			position: relative;
+            z-index: 2;
+            background-color: transparent;
+            display: flex;
+			flex-direction: column;
+			padding-left: #{$card-width-image + 20}px;
+			padding-bottom: 0px;
+			height: 100px;
+
+            h3 {
+                color: #323232;
+				margin-bottom: 0px;
+				overflow: hidden;
+                display: -webkit-box;
+				-webkit-box-orient: vertical;
+				height: 100%;
+			}
+			
+			.dsChannel-free {
+				-webkit-line-clamp: 4;
+				min-height: auto;
+				font-weight: bold;
+			}
+			
+			.card-channel-title {
+				font-weight: bold;
+                -webkit-line-clamp: 2;
+				height: auto;
+				word-break:break-all;
+
+			}
+
+            .description {
+				font-size: 12px;
+                color: $description-text-color;
+                margin-bottom: 0px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: $lines;
+				-webkit-box-orient: vertical;
+			}
+		}
+		
+		.card-actions {
+			float: right;
+		}
+		
+		.edit-button {
+			position: absolute;
+			margin-top: 0px;
+			top: 0px;
+			right: 10px;
+		}
+	}
+	
+
+	&.combo, &.toolbar {
+		position: relative;
+		padding-inline-start: 10px;
+
+		li {
+			margin: 0px;
+			list-style: none;
+		}
+
+		.card-menu {
+			display: none;
+		}
+
+		.card {
+			width: $card-width-small-px;
+			height: $full-height-small-px;
+			margin: 0;
+
+			.card-image {
+				min-width: $card-width-image-small-px;
+				width: $card-width-image-small-px;
+				height: $full-height-small-px;
+
+				&.widescreen {
+					right: 0;
+					min-width: 100%;
+					width: 100%;
+				}
+			}
+
+			h3 {
+				font-size: 4px;
+				margin-bottom: 0px;
+			}
+
+			.description {
+				font-size: 3px;
+			}
+
+			.card-content {
+				padding: 2px;
+				padding-left: #{$card-width-image-small + 2}px;
+
+				.description {
+					-webkit-line-clamp: $lines-small;
+				}
+			}
+
+			.card-actions {
+				display: none;
+			}
+		}
+	}
+
+	&.toolbar {
+		margin-top: 0;
+		margin-bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.card {
+			&:hover{
+				cursor: default;
+			}
+		}
+	}
+
+	&.header{
+		.card {
+			margin: 0 auto;
+		}
+
+		&.empty {
+			position: relative;
+		}
+	}
+
+	.combo-field__control {
+		padding: 4px 0px;
+	}
+
+	@media screen and (max-width: 400px) {
+		.card {
+			width: $card-mobile-width-px;
+			height: $full-height-mobile-px;
+
+			.card-image {
+				min-width: $card-width-mobile-image-px;
+				width: $card-width-mobile-image-px;
+				height: $full-height-mobile-px;
+			}
+
+			.card-content {
+				padding: 10px;
+				padding-bottom: 0px;
+				height: $card-content-height-small;
+				padding-left: #{$card-width-mobile-image + 10}px;
+			}
+
+			.description {
+                -webkit-line-clamp: $lines-mobile !important;
+			}
+		}
+	}
+}

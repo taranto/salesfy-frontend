@@ -1,0 +1,124 @@
+.app-bar {
+    background-color: white !important;
+    // background: linear-gradient(to right bottom, $primary-color, $second-color) !important;
+    height: 70px;
+    color: $primary-color !important;
+
+    &::after {
+        content: "";
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right bottom, $primary-color, $second-color) !important;
+    }
+}
+
+.home-menu {
+    position: absolute;
+    top: 0px;
+	left: 0px;
+
+    ul {
+        div, span {
+            color: white;
+        }
+
+        .material-icons {
+            font-size: 28px;
+        }
+    }
+
+    .menu-label {
+		padding-left: 20px;
+		width:0px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+    }
+
+    .sub-item {
+        padding-left: 20px;
+
+		img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .user-component {
+        display: flex  !important;
+        flex-direction: column !important;
+        p {
+            color: white;
+        }
+	}
+	
+	&.open {
+		overflow-x:"hidden";
+		overflow-y:auto;
+	}
+
+    &.close {
+        width: 70px;
+
+        > div {
+            transform: none !important;
+            visibility: initial !important;
+
+            .nm-avatar, .em-avatar {
+                display: none;
+            }
+
+            .menu-avatar {
+                width: 50px;
+                height: 50px;
+            }
+
+        }
+
+        .menu-label {
+			display: none;
+        }
+
+        .sub-item {
+            padding-left: 0px;
+        }
+
+        ul {
+            > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.menu-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+
+    ul > span {
+        color: $primary-color;
+        text-align: center;
+        margin: 5px auto;
+		display: block;
+    }
+}
+
+.badge-group {
+    background-color: white;
+    border-radius: 100%;
+    color: #1a1a1a !important;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+	line-height: 30px;
+	resize:none;
+	overflow:hidden;
+}

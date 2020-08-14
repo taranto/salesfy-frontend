@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href='/assets/app-favicon.png' />
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <% if (webpackConfig.mode == 'production') { %>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "",
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
+    </script>
+    <% } else { %>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "",
+                notifyButton: {
+                    enable: true,
+                },
+                allowLocalhostAsSecureOrigin: true,
+            });
+        });
+    </script>
+    <% } %>
+
+
+    <script async defer src="/apidrive.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Salesfy</title>
+    <meta property="og:image" content="/assets/app-favicon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="web.salesfy.com.br" />
+    <meta property="og:title" content="Salesfy" />
+    <meta property="og:description" content="Seu time vende mais com a munição certa." />
+    <meta name="google-site-verification" content="" />
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Dependencies -->
+    <% if (webpackConfig.mode == 'production') { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.4/umd/react.production.min.js"
+        integrity="sha256-ctUamuIgSCQg1wsh8Iw0QbDXScmyXhjJ6lxYUscC3FA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.4/umd/react-dom.production.min.js"
+        integrity="sha256-8uWWG/7CB3OS89Cw67+B++t6w0EMGfQE9C6OGps+Wd8=" crossorigin="anonymous"></script>
+    <% } else { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.4/umd/react.development.js"
+        integrity="sha256-5qXzTpCme2glpjIMD82N9CvHzot7DsNj+J81wNBYCs8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.4/umd/react-dom.development.js"
+        integrity="sha256-zaBIa6kuwEspzOIU5TeB5bATnxmvJFmht9smi5jLH/Q=" crossorigin="anonymous"></script>
+    <% } %>
+</body>
+
+</html>

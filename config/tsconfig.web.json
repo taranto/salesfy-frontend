@@ -1,0 +1,60 @@
+{
+	"compilerOptions": {
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "es6",
+		"module": "commonjs",
+		"lib": ["es6", "dom", "es2017"],
+		"moduleResolution": "node",
+		"jsx": "react",
+		"outDir": "artifacts",
+		"allowSyntheticDefaultImports": true,
+		"noImplicitAny": false,
+		"preserveConstEnums": true,
+		"allowJs": false,
+		"sourceMap": true,
+		"noImplicitReturns": true,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"allowUnusedLabels": true,
+		"alwaysStrict": false,
+		"esModuleInterop": true,
+		"pretty": true,
+		"strict": true,
+		"strictPropertyInitialization": true,
+		"strictNullChecks": true,
+		"skipLibCheck": true,
+		"types": [
+			"node",
+			"native-base",
+			"react",
+			"react-native",
+			"react-navigation",
+			"jest",
+			"salesfy-shared"
+		],
+		"baseUrl": ".",
+		"paths": {
+			"web/*": ["ts/web/*"],
+			"app-core/*": ["ts/core/*"],
+			"utils/*": ["ts/web/utils/*"],
+			"assets/*": ["assets/*"],
+			"containers": ["ts/web/container"],
+			"components": ["ts/web/stories/component"],
+			"screens": ["ts/web/stories/screen"],
+			"boot/*": ["ts/web/boot/*"],
+			"native/*": ["ts/web/native/*"],
+			"root/*": ["ts/*"]
+		}
+	},
+	"exclude": [
+		"android",
+		"App.js",
+		"ts/app",
+		"ts/test",
+		"ios",
+		"build",
+		"node_modules"
+	],
+	"compileOnSave": true
+}

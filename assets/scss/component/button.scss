@@ -1,0 +1,50 @@
+.new-button {
+   margin-left: 15px !important; 
+   color: $second-color !important;
+   border-color: $second-color !important;
+   text-transform: capitalize !important;
+
+   svg {
+       margin-right: 5px;
+   }
+}
+.success-button {
+    margin-left: 15px !important; 
+    color: $success-color !important;
+    border-color: $success-color !important;
+    text-transform: capitalize !important;
+ 
+    svg {
+        margin-right: 5px;
+    }
+ }
+
+ .drive-button {
+	margin-left: 10px !important; 
+	margin-bottom: 15px !important;
+    color: #4d4d4d !important;
+    border-color: $description-text-color !important;
+    text-transform: none !important;
+ 
+    img {
+        margin-right: 10px;
+    }
+ }
+
+ .rating-button-loading {
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+
+ .menu-progress {
+	 position: relative;
+     
+     .buttonProgress {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -12px;
+        margin-left: -12px;
+     }
+ }

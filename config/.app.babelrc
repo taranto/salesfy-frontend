@@ -1,0 +1,33 @@
+{
+  "presets": [
+    "module:metro-react-native-babel-preset",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    [
+      "babel-plugin-rewrite-require",
+      {
+        "aliases": {
+          "joi": "react-native-joi",
+          "axios": "react-native-axios"
+        }
+      }
+    ]
+  ],
+  "sourceMaps": true,
+  "env": {
+    "web": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "aliases": {
+              "react-native": "react-native-web",
+              "react-native-linear-gradient": "react-native-web-linear-gradient"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

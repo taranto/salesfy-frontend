@@ -1,0 +1,47 @@
+.stories-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 127px;
+
+	> button {
+		margin-left: 10px;
+		margin-right: 10px;
+
+		svg {
+			font-size: 45px;
+		}
+	}
+
+	.stories {
+		&:hover{
+			opacity: 0.6;
+			cursor: pointer;
+		}
+	}
+
+	.dummy-arrow {
+		display: block;
+		min-width: 69px;
+	}
+	
+	.grid-list {
+		display: -webkit-inline-box !important;
+		flex-wrap: nowrap;
+		transform: translateZ(0);
+		overflow-y: auto;
+		list-style: none;
+		padding-left: 0px;
+
+		&::-webkit-scrollbar { 
+			display: none; 
+		}
+	}
+
+	.description {
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}	
+}

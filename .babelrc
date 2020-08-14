@@ -1,0 +1,43 @@
+{
+  "presets": [
+      [
+          "@babel/preset-env",
+          {
+              "modules": false
+          }
+      ],
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+  ],
+  "plugins": [
+      "react-hot-loader/babel",
+      [
+          "babel-plugin-webpack-alias",
+          {
+              "config": "./configs/webpack/dev.js"
+          }
+      ]
+  ],
+  "env": {
+      "production": {
+          "presets": [
+              "latest", "stage-0", "react",
+              "minify"
+          ],
+          "plugins": [
+              [
+                  "babel-plugin-webpack-alias",
+                  {
+                      "config": "./configs/webpack/prod.js"
+                  }
+              ]
+          ]
+      },
+      "test": {
+          "presets": [
+              "@babel/preset-env",
+              "@babel/preset-react"
+          ]
+      }
+  }
+}

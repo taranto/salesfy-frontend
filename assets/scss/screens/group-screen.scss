@@ -1,0 +1,160 @@
+.group-screen {
+    @import 'component/screen-list';
+
+    .new-group-combo-container {
+        display:flex;
+        flex-grow: 1;
+        width: 100%;
+
+        .name-combo {
+            width: 100%;
+        }
+    }
+
+    .new-group-combo {
+        position:relative;
+        width: 100%;
+        z-index: 5000;
+    }
+
+    .edit-group-combo {
+        z-index: 5000;
+        position:relative;
+        margin: -3px;
+        width: 100%;
+    }
+
+    .change-role-container {
+        z-index: 5000;
+        position:relative;
+    }
+
+    .remove-label-container {
+        z-index: 5000;
+        position:relative;
+    }
+
+    @keyframes easein {
+        from {opacity: 0}
+        to {opacity: 0.8}
+    }
+
+    .window-blur {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgb(255, 255, 255);
+        opacity: 0.8;
+        filter: blur(15px); 
+        animation-name: easein;
+        animation-duration: 1s;
+    }
+
+    .change-role-confirmation {
+        margin: +3px;
+        z-index: 1000;
+        padding-left: 35px;
+		display: flex;
+		flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .confirmation-buttons {
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+        }
+        h6 {
+            font-size: 2vw;
+            white-space: nowrap;
+        }
+        $breakpoint-pc: 1200px;
+        @media (min-width: $breakpoint-pc) {
+            h6 {
+                font-size: 25px;
+            }
+        }
+	}
+
+    .delete-row-confirmation {
+        z-index: 1000;
+        padding-left: 35px;
+		display: flex;
+		flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .confirmation-buttons {
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+        }
+        h6 {
+            font-size: 2vw;
+            white-space: nowrap;
+        }
+        $breakpoint-pc: 1200px;
+        @media (min-width: $breakpoint-pc) {
+            h6 {
+                font-size: 25px;
+            }
+        }
+	}
+
+    
+    .group-list-toolbar {
+        position: absolute;
+        right: 0;
+        top: -57px;
+
+        > div {
+            > div:nth-child(2) {
+                > div {
+                    border: 1px solid $gray-color;
+                    background-color: white;
+                    padding-right: 10px;
+                    padding-left: 30px;
+                    height: 34px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    &::after, &::before {
+                        border: none !important;
+                    }
+
+                    span {
+                        font-size: 24px;
+                        color: $description-text-color;
+                    }
+
+                    > div > span {
+                        left: 10px;
+                        position: absolute;
+                    }
+                }
+            }
+            > div:last-child{
+                > div > div {
+                    display: flex;
+
+                    .new-button {
+                        width: 140px;
+                    }
+                }
+            }
+        }
+    }
+
+    .screen-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

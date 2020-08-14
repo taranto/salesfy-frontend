@@ -1,0 +1,31 @@
+.ind {
+    &.never-view {
+        border-left: 5px solid $primary-color !important;
+    }
+
+    &.not-read {
+        border-left: 5px solid #cc7722 !important;
+    }
+
+    &.not-read-recent {
+        border-left: 5px solid #f8de7e !important;
+    }
+}
+
+.stories {
+    .ind {
+        border: 2px solid transparent !important;
+
+        &.never-view {
+            border: 2px solid $primary-color !important;
+        }
+    
+        &.not-read {
+            border: 2px solid #cc7722 !important;
+        }
+    
+        &.not-read-recent {
+            border: 2px solid #f8de7e !important;
+        }
+    }
+}

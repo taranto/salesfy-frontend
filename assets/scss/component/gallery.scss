@@ -1,0 +1,46 @@
+.react-photo-gallery--gallery div {
+    flex-flow: nowrap !important;
+  }
+  
+  
+//use in sass/scss
+.react-photo-gallery--gallery{
+    div{
+        flex-flow: nowrap !important;
+    }
+}
+
+.google-image-suggest {
+    width: 330px;
+    margin: 0 auto;
+
+    p {
+        width: 330px;
+        text-align: center;
+    }
+
+    div[role="progressbar"]{
+        margin: 0 auto;
+        display: block;
+    }
+
+    img {
+        width: auto;
+		height: auto;
+		max-height: 100px;
+        margin: 5px;
+    }
+
+    .image-container {
+        position: relative;
+
+        a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;            
+        }
+    }
+}

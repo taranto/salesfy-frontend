@@ -1,0 +1,125 @@
+.list-group-avatar {
+    padding-left: 50px;
+}
+.user-component {    
+    &.menu {
+		margin-bottom: 0px;
+    }
+    
+    .small-avatar {
+        height: 30px;
+        width: 30px;
+    }
+    
+    .large-avatar {
+        height: 70px;
+        width: 70px;
+    }
+
+    .menu-avatar {
+		margin: 0 auto;
+        margin-top: 30px;
+    }
+    
+    .list-avatar {
+        margin-right: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+	.text-color {
+		color: $gray-inverse-color;
+	}
+	    
+	.nm-avatar-menu {
+		text-align: center;
+		// height: 120px;
+		padding: 10px;
+		padding-bottom: 0px;
+		font-size: $font-large;
+        white-space: nowrap; 
+		overflow-y: visible;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+        
+        position: relative;
+        &.small-text {
+            font-size: $font-medium;
+        }
+    }
+    
+	.em-avatar-menu {
+		text-align: center;
+		// height: 100px;
+		padding: 10px;
+		padding-top: 0px;
+        font-size: $font-medium;
+        color: $description-text-color;
+        white-space: nowrap; 
+		overflow-y: visible;
+		overflow-x: hidden;
+        text-overflow: ellipsis;
+        
+        position: relative;
+        &.small-text {
+            font-size: $font-small;
+		}
+    }
+    
+	.nm-avatar {
+        max-width: 90%;
+		margin-top: 10px;
+		font-size: $font-large;
+        
+        &.small-text {
+            margin-top: 0px;
+            font-size: $font-medium;
+            max-width: 100%;
+        }
+    }
+    
+	.em-avatar {
+        max-width: 90%;
+        font-size: $font-medium;
+        color: $description-text-color;
+        
+        &.small-text {
+            font-size: $font-small;
+            max-width: 100%;
+        }
+    }
+
+    .chip-type {
+        height: 25px;
+        border-radius: 10px;
+        line-height: 16px;
+        text-transform: initial;
+		font-weight: normal;
+		margin:10px;
+
+        &.admin {
+            background-color: $primary-color;
+            color: $primary-inverse-color;
+        }
+
+        &.member {
+            background-color: $second-color;
+            color: $primary-inverse-color;
+		}
+		
+        &.reader {
+            background-color: $gray-color;
+            color: $primary-inverse-color;
+
+        }
+    }
+
+    .avatar-separator {
+        width: calc(100% - 20px);
+        height: 1px;
+        background-color: $description-text-color;
+        margin-left: 10px;
+        margin-right: 10px;
+		margin-top: 20px;
+    }
+}

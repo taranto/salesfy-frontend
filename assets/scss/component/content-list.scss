@@ -1,0 +1,372 @@
+$card-width: 230;
+$image-height: $card-width/2;
+$full-short-height: $image-height + 65;
+$full-height: $card-width*4/3;
+
+$lines : 4;// round(($full-height - $image-height - 106)/12);
+
+$card-width-px: #{$card-width}px;
+$image-height-px: #{$image-height}px;
+$full-short-height-px: #{$full-short-height}px;
+$full-height-px: #{$full-height}px;
+
+.content-list, .content-card-container {
+	&:not(.horizontal) {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		justify-content: center;
+	}
+
+    a {
+        text-decoration: none;
+    }
+
+	> div:last-child {
+		// display: contents !important;
+    }
+
+    > div  {
+        // width: 100% !important;
+        > div > div[role='grid'] {
+            height: calc(100vh - 52px) !important;
+            // width: 100% !important;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &.full {
+        > div > div  {
+            > div[role='grid'] {
+                height: calc(100vh - 52px) !important;
+            }
+        }
+    }
+    
+    .row-grid-list {
+        display: flex;
+        align-items: center;
+		justify-content: center;
+		
+		overflow-y: hidden;
+    }
+
+	.content-list-header {
+		width: 100% !important;
+		height: 250px !important;
+
+		ul {
+			justify-content: center;
+		}
+
+		.list-header:last-child {
+			// margin-top: 30px !important;
+		}
+	}
+
+	.loader {
+		height: auto !important;
+		padding: 0px !important;
+		margin: 0px !important;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+    .card {
+        position: relative;
+        width: $card-width-px;
+		height: $full-height-px;
+		padding-bottom: 40px;
+		padding: 0;
+		margin:20px;
+		overflow: hidden;
+        background-color: white;
+        border: 1px solid #ebebeb;
+        box-shadow: none;
+        cursor: pointer;
+
+        &.wizard {
+            border: 1px dashed #ebebeb !important;
+            cursor: default;
+
+            .wizard-container {
+				background-color: #eeeeee;
+                height: $full-height-px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;         
+                
+                p {
+                    font-size: 14px !important;
+                    margin-left: 15px !important;
+                    margin-right: 15px !important;
+                }
+    
+                .buttons-container {
+                    display: flex;
+    
+                    .img-button {
+                        width: 30px;
+                        height: 30px;
+                    }                    
+                }
+    
+                .link-area {
+                    resize: none;
+                    height: 70px;
+                    width: 180px;
+                    border-color: #ebebeb;
+                    border-radius: 3px;
+                    padding: 10px;
+                    outline: none !important;
+					margin-bottom: 10px;
+					font-family: Helvetica, sans-serif;
+					font-weight: 300;
+					font-size: 16px;
+                }
+    
+                .footer-actions {
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: flex-end;
+                    padding-right: 20px;
+
+                    .warning {
+                        margin-right: 5px;
+                        color: #f1c40f;
+                        font-size: 1.1rem;
+                    }
+    
+                    .prepare-button {
+                        height: 30px;
+                    }
+    
+                    .cancel-button {
+                        width: 30px;
+                        height: 30px;
+                        font-size: 1.1rem;
+    
+                        span {
+                            position: relative;
+                            top: -7px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover{
+			border: 1px solid #ddd;
+		}
+
+        .card-image {
+            width: $card-width-px;
+            height: $image-height-px;
+            height: $image-height-px;
+
+            &.full-image {                
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                height: inherit;          
+            }
+        }
+        
+        &.full {
+            display: flex;
+            flex-direction: column;
+
+            .footer {
+				height: 100%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+                bottom: 0px !important;
+            }
+        }
+
+        &.short {
+            height: $full-short-height-px;
+            display: flex;
+            flex-direction: column;
+
+            .footer {
+				height: 100%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+                bottom: 0px !important;
+            }
+
+            &.full-image {
+                height: $full-short-height-px;
+            }
+        }
+
+        .card-content {
+            z-index: 2;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            height: 126px;
+            padding: 10px;
+
+            h3 {
+                color: #323232;
+				margin-bottom: 10px;
+				overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 24px;
+				min-height: 48px;
+				
+			}
+			
+			.dsContent-free {
+                -webkit-line-clamp: 5;
+				min-height: auto;
+			}
+
+            .description {
+                font-size: 12px;
+                color: $description-text-color;
+                margin-bottom: 10;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: $lines;
+                -webkit-box-orient: vertical;
+            }
+        }
+
+        .footer {        
+            z-index: 99999;  
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .card-menu {
+                z-index: 99999;
+                float: right;
+            }
+
+            .author {
+                color: $important-color;
+                font-size: 12px;
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+                padding-left: 15px;
+            }
+
+            .left {
+                width: 100%;
+            }
+        }
+    }
+ 
+    .overlay-image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: linear-gradient(to top,$description-text-color, rgba(0,0,0, 0) 25%)
+    }
+
+    .card-full-image {  
+        a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 9999;
+        }
+        .footer {
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            bottom: 0px !important;
+
+            p {
+                padding-bottom: 7px;
+            }
+        }
+    }
+
+    .rating {
+        .rating-button {
+            padding: 6px 0px;
+            min-width: initial;
+            span {
+                font-size: 14px;
+            }
+        }
+          
+          /* The container <div> - needed to position the dropup content */
+          .dropup {
+            position: relative;
+            display: inline-block;
+          }
+          
+          /* Dropup content (Hidden by Default) */
+          .dropup-content {
+            display: none;
+            position: absolute;
+            bottom: 30px;
+            background-color: white;
+            min-width: 150px;
+            border: 1px solid #ebebeb;
+            border-radius: 3px;
+            z-index: 1;
+            color: rgba(0, 0, 0, 0.87);
+          }
+          
+          /* Links inside the dropup */
+          .dropup-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          /* Change color of dropup links on hover */
+          .dropup-content a:hover {background-color: #ddd}
+          
+          /* Show the dropup menu on hover */
+          .dropup:hover .dropup-content {
+            display: block;
+          }
+    }
+}
+
+.content-card-container {
+    position: relative;
+
+    .card {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .card-full-image {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

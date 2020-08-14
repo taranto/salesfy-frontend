@@ -1,0 +1,106 @@
+.screen-menu {
+    margin-left: 10px;
+    z-index: 99999;
+
+    button {
+        &:hover, &:focus, &:active {
+            // background-color: transparent;
+        }
+        
+    }
+
+    .popper, .paper {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .paper {
+        right: 20px;
+        position: relative;
+        box-shadow: none;
+
+        li {
+            background: rgba(0,0,0,.7);
+            border-radius: 3px;
+            clear: both;
+            color: #e6e6e6;
+            display: block;
+            float: right;
+            margin: 0 0 4px 8px;
+            padding: 6px 12px 6px 8px;
+            text-decoration: none;
+            transition: -webkit-transform 85ms ease-in;
+            transition: transform 85ms ease-in;
+            transition: transform 85ms ease-in,-webkit-transform 85ms ease-in;
+            display: flex;
+            min-height: 30px;
+            height: 30px;
+
+            svg {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+
+            &:hover {
+                background: rgba(0,0,0,.8);
+            }
+        }
+    }
+}
+
+.confirm-delete {
+    margin-left: 0px !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 9999;
+
+    svg {
+        color: white;
+    }
+}
+
+#menu-button {
+    margin: 0 auto;
+    margin-top: 20px;
+
+    &.open {
+        svg {
+            padding-right: 20px;
+        }
+    }
+
+    img {
+        height: 30px;
+    }
+}
+
+.settings-menu {
+    position: relative;
+    margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top:auto;
+
+    svg {
+        color: white;
+    }
+}
+
+.home-menu {
+    ul {
+        // height: 100%;
+    }
+}
+
+.web-system-version {
+	text-align: center;
+}

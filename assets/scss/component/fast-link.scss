@@ -1,0 +1,21 @@
+.fast-link-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    flex-wrap: wrap;
+
+    .img-button {
+        height: 30px;
+        width: 30px;
+    }
+
+    .img-button-canva {
+        height: 25px;
+    }
+
+    .img-button-google {
+        height: 25px;
+    }
+}

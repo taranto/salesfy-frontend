@@ -1,0 +1,28 @@
+.group-component {
+	.text-color {
+		color: $gray-inverse-color;
+	}
+	
+	flex-wrap: nowrap !important;
+
+
+	.nm-group {
+		width:100%;
+		margin-top: 0px;
+		font-size: $font-medium;
+
+		display:flex;
+		flex-direction: row;
+		align-items:center;
+		
+		.group-row-buttons {
+			display:flex;
+			flex-grow: 1;
+			justify-content: flex-end;
+		}
+	
+		button {
+			margin-left: 30px;
+		}
+    }
+}

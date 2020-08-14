@@ -1,0 +1,58 @@
+.slider-carousel {
+    > div:last-child {
+        min-height: 400px;
+    }
+
+    div, span, li {
+        outline: none !important;
+    }
+
+    .details {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > button {
+            border: none;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .checkbox {
+        width: 30px;
+        display: block;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    li {
+        > div {
+            display: flex;
+            align-content: center;
+            justify-content: flex-start; //center
+            flex-direction: column;
+        }
+    }
+
+
+
+    .list-header {
+        width: 190px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px !important;
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .row-selection {
+        width: 240px;
+        display: flex;
+        align-items: center;
+    }
+}
